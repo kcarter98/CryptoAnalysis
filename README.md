@@ -30,27 +30,93 @@ The data used in this project will be stored in PostgreSQL database after being 
 
 ### Coins Table
 
-The coins table will store the coin ids and their information, such as symbol and name.
+The coins table will store the currencies and their information, such as symbol and name.
 
 **Fields Used**
 
-- **CoinID**
+- **CoinID** (String) - Primary Key - The Coin ID field will be used as the unique identifier for each row. Each currency has it's own unique coin id.
 
-- **Symbol**
+- **Symbol** (String) - Abbreviated name of the currency.
 
-- **Name**
+- **Name** (String) - Full name of the currency.
 
 
 ### Exchanges Table
 
+The exchanges table will be used to store exchanges, where you can buy and sell cryptocurrency, and their related information.
+
+**Fields Used**
+
+- **ExchangeID** (String) - Primary Key - The Exchange ID field will be used as the unique identifier for each row. Each exchange has it's own unique exchange id.
+
+- **Name** (String) - Full name of the exchange.
+
+- **Year_Established** - (Int) - Year the exchange was created.
+
+- **Country** - (String) - Country of origin.
+
+- **BTC_24hVolume** - (Float) - The amount of bitcoin (in bitcoin) traded on the exchange in the past 24 hours.
+
 
 ### OHLC Table
+
+This table will store each currencies open, high, low, close (OHLC) data for all currencies being selected. This data will be historical data ranging from Oct 31, 2018 to Oct 31, 2021. The data is taken every 3 days.
+
+**Fields Used**
+
+- **Date** - (Datetime) - Primary Key - Date that the data on the table was taken. As there is no time that the crypto market opens and closes, this data is considered to be taken at 00:00 UTC. Used as a composite key with coin id.
+
+- **CoinID**
+
+- **Open**
+
+- **High**
+
+- **Low**
+
+- **Close**
 
 
 ### Tickers Table
 
+**Fields Used**
+
+- **TickerID**
+
+- **Ticker**
+
+- **LastPrice**
+
+- **Volume**
+
+- **Time**
+
+- **CoinID**
+
+- **ExchangeID**
+
 
 ### HistoricalMarketData Table
 
+**Fields Used**
+
+- **Date**
+
+- **CoinID**
+
+- **Price**
+
+- **Market_Cap**
+
+- **Total_Volume**
+
 
 ### HistoricalExchangeVolume Table
+
+**Fields Used**
+
+- **Date**
+
+- **ExchangeID**
+
+- **Volume**
