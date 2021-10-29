@@ -8,7 +8,7 @@ This analysis will look into metrics of the cryptocurrency market, such as open,
 
 The data used in this analysis was pulled from the CoinGecko API. Both historical and current data will be used, and the historical data will be up to 3 years in the past ranging from Oct 31, 2018 to Oct 31, 2021. The documentation for this API can be found in the link below >>>
 
-![CoinGecko Documentation](https://www.coingecko.com/en/api/documentation)
+[CoinGecko Documentation](https://www.coingecko.com/en/api/documentation)
 
 #### Questions Intended To Answer
 
@@ -28,7 +28,7 @@ The data used in this project will be stored in PostgreSQL database after being 
 
 ![Database ERD](Images/DatabaseERD.PNG)
 
-#### Coins Table
+### Coins Table
 
 The coins table will store the coin ids and their information, such as symbol and name.
 
@@ -41,16 +41,16 @@ The coins table will store the coin ids and their information, such as symbol an
 - **Name**
 
 
-#### Exchanges Table
+### Exchanges Table
 
 
-#### OHLC Table
+### OHLC Table
 
 
-#### Tickers Table
+### Tickers Table
 
 
-#### HistoricalMarketData Table
+### HistoricalMarketData Table
 
 
-#### HistoricalExchangeVolume Table
+### HistoricalExchangeVolume Table
