@@ -8,7 +8,7 @@ This analysis will look into metrics of the cryptocurrency market, such as open,
 
 The data used in this analysis was pulled from the CoinGecko API. Both historical and current data will be used, and the historical data will be up to 3 years in the past ranging from Oct 31, 2018 to Oct 31, 2021. The documentation for this API can be found in the link below >>>
 
-![CoinGecko Documentation](https://www.coingecko.com/en/api/documentation)
+[CoinGecko Documentation](https://www.coingecko.com/en/api/documentation)
 
 #### Questions Intended To Answer
 
